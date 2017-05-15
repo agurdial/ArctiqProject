@@ -1,0 +1,14 @@
+---
+
+- name: Hello World
+  hosts: Webserver
+  become: true
+
+
+  tasks:
+    - name: Nginx setup
+      apt: name=nginx state=present update_cache=yes
+ 
+      
+    - name: hello.html
+      template: src=hello.html dest=/usr/share/nginx/html/hello.html
