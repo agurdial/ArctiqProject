@@ -2,11 +2,19 @@
 
 #This playbook will deploy an AWS EC2 Instance in the Ohio region. 
 
-#Below will connect to localhost as per stated in the inventory file "hosts"
+#Below will connect to localhost as per stated in the inventory file "hosts" where become is stating to run as sudo
+
 - name: Deploy EC2 Instance
   hosts: localhost
   become: true
 
+#This is where we will use the ec2 module to spin up our instance. 
+#Key_name: will be the same as the key name we created on the AWS console 
+#instance_type:
+#image:
+#count: This will define how many instances to deploy 
+#Region: This the region in your AWS console that you created your user under
+#aws_access_key and aws_secret_key: This is the keys that are generated when you create a user, it is used to authenticate to AWS
 
   tasks:
     - ec2:
