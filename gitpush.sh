@@ -7,7 +7,7 @@ read commitMessage
 
 git commit -m "$commitMessage"
 
-ehco 'Entre the name of the branch:'
+echo 'Entre the name of the branch:'
 read branch
 
 git push origin $branch
