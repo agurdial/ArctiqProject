@@ -2,7 +2,7 @@
 
 #This playbook will deploy an AWS EC2 Instance in the Ohio region. 
 
-- name: Deploy EC2 Instanc
+- name: Deploy EC2 Instance
   hosts: localhost
   become: true
 
