@@ -1,0 +1,21 @@
+---
+
+#This playbook will deploy an AWS EC2 Instance in the Ohio region. 
+
+- name: Deploy EC2 Instanc
+  hosts: localhost
+  become: true
+
+
+  tasks:
+    - ec2:
+        key_name: Arctiq
+        instance_type: t2.micro
+        image: ami-4191b524
+        wait: true
+        count: 1
+        region: us-east-2
+        aws_access_key: AKIAI7ZS6ZOFA7SOBTBA
+        aws_secret_key: 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
+
+
