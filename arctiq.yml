@@ -2,6 +2,7 @@
 
 #This playbook will deploy an AWS EC2 Instance in the Ohio region. 
 
+#Below will connect to localhost as per stated in the inventory file "hosts"
 - name: Deploy EC2 Instance
   hosts: localhost
   become: true
